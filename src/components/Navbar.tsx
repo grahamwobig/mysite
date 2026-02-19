@@ -31,6 +31,11 @@ function Navbar() {
                     <li><Link to="/contact">Contact</Link></li>
                     <li><a href="/resume.pdf">Resume</a></li>
                 </ul>
+                <div className="navbar-hamburger" onClick={toggleMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
     );
