@@ -14,6 +14,15 @@ function Navbar() {
     return (
         <nav className="navbar">
             <div className="navbar-container">
+                <div className="social-links">
+                    <p>Graham Wobig</p>
+                    <a target="_blank" href="https://www.github.com/grahamwobig">
+                        <img src="/github_darkMode_32x32.png" alt="Github"/>
+                    </a>
+                    <a target="_blank" href="https://www.linkedin.com/in/graham-wobig/">
+                        <img src="/linkedin_darkMode_32x32.png" alt="LinkedIn"/>
+                    </a>
+                </div>
                 <ul className="navbar-menu">
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/skills">Skills</Link></li>

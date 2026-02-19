@@ -1,17 +1,17 @@
 /* Global CSS variables and font setup */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
 :root {
   --navbar-height: 64px;
-  --text-color: #333;
+  --text-color: #e1e1e1;
   --hover-color: #666;
   --primary-color: #000;
   --primary-hover-color: #444;
-  --bg-white: #fff;
+  --bg-white: #000;
   --spacing-xl: 24px;
   --container-width: 1200px;
   --transition-fast: 0.2s ease;
-  --menu-font-family: 'Inter', sans-serif;
+  --menu-font-family: 'Pixelify Sans', sans-serif;
 }
 
 
@@ -23,7 +23,7 @@
 
 /* Navbar container */
 .navbar {
-  background-color: rgba(245, 243, 242, 0.85);
+  background-color: rgba(37, 36, 36, 0.85);
   color: var(--text-color);
   height: var(--navbar-height);
   width: 100%;
@@ -45,8 +45,41 @@
   margin: 0 auto;
 }
 
+.social-links {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.social-links p {
+    padding-right: 1rem;
+    font-size: 2.5rem;
+}
+
+.social-links a {
+    padding-top: 0.25rem;
+    gap: 0.25rem;
+}
+
 /* Desktop Menu */
 .navbar-menu {
   display: flex;
   list-style: none;
+}
+
+.navbar-menu li {
+  margin: 0 1rem;
+}
+
+.navbar-menu a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  line-height: 1;
+  gap: 0.25rem;
 }
