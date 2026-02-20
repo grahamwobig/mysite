@@ -1,4 +1,4 @@
-import React, { 
+import { 
     useState,
 } from "react";
 import { Link } from "react-router";
@@ -12,6 +12,8 @@ function Navbar() {
     const toggleMenu = () => setIsOpen(prev => !prev);
     //close hamburger menu
     const closeMenu = () => setIsOpen(false);
+
+    // TODO- implement nice buttons for the navbar: https://codepen.io/wesbos/pen/jEbeNdw (inspiration)
 
     return (
         <nav className="navbar">
