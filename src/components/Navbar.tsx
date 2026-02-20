@@ -10,6 +10,8 @@ function Navbar() {
 
     //toggle hamburger menu
     const toggleMenu = () => setIsOpen(prev => !prev);
+    //close hamburger menu
+    const closeMenu = () => setIsOpen(false);
 
     return (
         <nav className="navbar">
@@ -23,18 +25,31 @@ function Navbar() {
                         <img src="/linkedin_darkMode_32x32.png" alt="LinkedIn"/>
                     </a>
                 </div>
+
                 <ul className="navbar-menu">
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/skills">Skills</Link></li>
                     <li><Link to="/work">Work</Link></li>
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
-                    <li><a href="/resume.pdf">Resume</a></li>
+                    <li><a target="_blank" href="/resume.pdf">Resume</a></li>
                 </ul>
+
                 <div className="navbar-hamburger" onClick={toggleMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+
+                <div className={`navbar-mobile-menu ${isOpen ? 'active' : ''}`}>
+                    <ul>
+                        <li><Link to="/about" onClick={closeMenu}>About</Link></li>
+                        <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>
+                        <li><Link to="/work" onClick={closeMenu}>Work</Link></li>
+                        <li><Link to="/projects" onClick={closeMenu}>Projects</Link></li>
+                        <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
+                        <li><a target="_blank" href="/resume.pdf" onClick={closeMenu}>Resume</a></li>
+                    </ul>
                 </div>
             </div>
         </nav>
