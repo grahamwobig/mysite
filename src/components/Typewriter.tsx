@@ -1,37 +1,69 @@
 import { useEffect, useState } from "react";
 
-function Typewriter(strings: string[], delay: number, backspaceDelay: number) {
+interface TypewriterProps {
+    strings: string[];
+    delay: number;
+    backspaceDelay?: number;
+}
+
+function Typewriter({ strings, delay, backspaceDelay }: TypewriterProps) {
     const [currentText, setCurrentText] = useState('');
     const [currentStringIndex, setCurrentStringIndex] = useState(0);
     const [currentCharIndex, setCurrentCharIndex] = useState(0);
+    const [currentString, setCurrentString] = useState(strings[0]);
+    //const [backspace, setBackspace] = useState(false);
+
+    // const typingAnimation = (): number | undefined => {
+    //     let timeout;
+    //     //typing out the current string
+    //     if (currentCharIndex < currentString.length && !backspace) {
+    //         timeout = setTimeout(() => {
+    //             setCurrentText(currentString.substring(0, currentCharIndex));
+    //             setCurrentCharIndex(prevIndex => prevIndex++);
+    //         }, delay);
+    //     }
+    //     //pause after fully typing out the current string
+    //     else if (currentCharIndex == currentString.length && !backspace) {
+    //         timeout = setTimeout(() => {
+    //             setCurrentText(currentString);
+    //             setCurrentCharIndex(prevIndex => prevIndex--);
+    //         }, backspaceDelay);
+    //         setBackspace(true);
+    //     }
+    //     //backspacing the current string
+    //     else if (currentCharIndex > 0 && backspace) {
+    //         timeout = setTimeout(() => {
+    //             setCurrentText(currentString.substring(0, currentCharIndex));
+    //             setCurrentCharIndex(prevIndex => prevIndex--);
+    //         }, delay);
+    //     }
+    //     //fully backspaced the current string
+    //     else if (currentCharIndex == 0 && backspace) {
+    //         timeout = setTimeout(() => {
+    //             setCurrentText('');
+    //             setCurrent
+    //         }, delay);
+    //         setCurrentStringIndex(prevIndex => prevIndex++);
+    //         setCurrentString(strings[currentStringIndex]);
+    //     }
+    //     return timeout;
+    // }
 
     useEffect(() => {
         let timeout;
-        let currentString = strings[currentStringIndex];
         //iterate over the list of strings
-        if (currentStringIndex < strings.length) {
-            let backspace = false;
-            //type out each character in the strings
-            if (currentCharIndex < currentText.length && !backspace) {
+        if (currentStringIndex <= strings.length) {
+            if (currentCharIndex <= currentString.length) {
                 timeout = setTimeout(() => {
-                    setCurrentCharIndex((prevIndex) => {
-                        prevIndex++;
-                        if
-                        return prevIndex;
-                    });
                     setCurrentText(currentString.substring(0, currentCharIndex));
+                    setCurrentCharIndex(prevIndex => prevIndex++);
                 }, delay);
             }
-            else if (currentCharIndex == currentText.length && backspace) {
-                timeout = setTimeout(() => {
-                    setCurrentCharIndex(prevIndex => prevIndex--);
-                    setCurrentText(currentString.substring(0, currentCharIndex));
-                })
-            }
-            //advance to next string
             else {
                 setCurrentStringIndex(prevIndex => prevIndex++);
-                currentString = strings[currentStringIndex];
+                setCurrentString(strings[currentStringIndex]);
+                setCurrentCharIndex(0);
+                setCurrentText('');
             }
         }
         //wrap back to beginning of strings
@@ -40,7 +72,7 @@ function Typewriter(strings: string[], delay: number, backspaceDelay: number) {
         }
         
         return clearTimeout(timeout);
-    })
+    }, [strings, delay, currentString, currentStringIndex, currentText, currentCharIndex]);
 
     return <span className="typewriter">{currentText}</span>;
 }

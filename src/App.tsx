@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Navbar from "./components/Navbar";
 import "./styles/Navbar.css";
+import Landing from "./components/Landing";
 
 function Page({ color, text }: { color: string, text: string }) {
   return (
@@ -20,6 +21,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <Landing />
       <Routes>
         <Route path="/about" element={<Page color="#4281A4" text="About"/>} />
         <Route path="/skills" element={<Page color="#48A9A6" text="Skills"/>} />
