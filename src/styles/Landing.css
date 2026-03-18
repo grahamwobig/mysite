@@ -1,0 +1,13 @@
+.homepage-container {
+    height: 100vdh;
+    margin-top: 64px;
+}
+
+.homepage-name {
+    font-size: 50px;
+}
+
+.homepage-animation {
+    height: 10%;
+    width: 100%
+}

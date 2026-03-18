@@ -1,4 +1,5 @@
 import Typewriter from "./Typewriter";
+import "../styles/Landing.css";
 
 function Landing() {
     return (
@@ -13,6 +14,7 @@ function Landing() {
                         "Project Manager"
                     ]}
                     delay={100}
+                    backspaceDelay={1000}
                 />
             </div>
             <div>
