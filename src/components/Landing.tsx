@@ -1,4 +1,4 @@
-import Typewriter from "./Typewriter";
+import FadingTypewriter from "./FadingTypewriter";
 import "../styles/Landing.css";
 
 function Landing() {
@@ -6,18 +6,20 @@ function Landing() {
         <section className="homepage-container" id="landing">
             <span className="homepage-name">Graham</span>
             <div className="homepage-animation">
-                <Typewriter 
+                <FadingTypewriter 
                     strings={[
                         "Full Stack Developer",
                         "Automation Engineer",
                         "Product Designer",
                         "Project Manager"
                     ]}
-                    delay={100}
-                    backspaceDelay={1000}
+                    typeDelay={100}
+                    stringDelay={4000}
+                    cursorFade={500}
+                    textFade={300}
                 />
             </div>
-            <div>
+            <div className="landing-banner">
                 <p>
                     Full Stack Software Engineer meets Process Automation Engineer. 
                     Motivated by the challenges of working on multi-disciplinary projects.
