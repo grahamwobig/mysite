@@ -1,13 +1,9 @@
 /* Global CSS variables and font setup */
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
+@import url('colors.css');
 
 :root {
   --navbar-height: 64px;
-  --text-color: #e1e1e1;
-  --hover-color: #666;
-  --primary-color: #000;
-  --primary-hover-color: #444;
-  --bg-white: #000;
   --spacing-xl: 24px;
   --container-width: 1200px;
   --transition-fast: 0.3s ease;
@@ -23,7 +19,7 @@
 
 /* Navbar container */
 .navbar {
-  background-color: rgba(37, 36, 36, 0.85);
+  background-color: var(--surface-color);
   color: var(--text-color);
   height: var(--navbar-height);
   width: 100%;
@@ -76,7 +72,7 @@
 }
 
 .navbar-menu a {
-  color: var(--text-color);
+  color: var(--primary-accent-color);
   text-decoration: none;
   font-size: 1.5rem;
   transition: color var(--transition-fast);
@@ -89,7 +85,7 @@
 }
 
 .navbar-menu a:hover {
-    color: var(--hover-color);
+    color: var(--secondary-accent-color);
     scale: 1.05;
 }
 
@@ -118,7 +114,7 @@
   top: var(--navbar-height);
   left: 0;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   flex-direction: column;
   list-style: none;
   max-height: 0;
@@ -147,7 +143,7 @@
 }
 
 .navbar-mobile-menu a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: var(--surface-color);
     scale: 1.05;
 }
 

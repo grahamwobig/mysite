@@ -1,6 +1,12 @@
+@import url('colors.css');
+@import url('Navbar.css');
+
 .homepage-container {
-    height: 100vdh;
-    margin-top: 64px;
+    height: calc(100vh - var(--navbar-height));
+    width: 100vw;
+    margin-top: var(--navbar-height);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .homepage-name {

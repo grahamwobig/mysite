@@ -25,7 +25,7 @@ function Landing() {
                     Motivated by the challenges of working on multi-disciplinary projects.
                 </p>
             </div>
-            <div>
+            <div className="landing-buttons">
                 <span>Learn More</span>
                 <span>Contact Me</span>
             </div>
