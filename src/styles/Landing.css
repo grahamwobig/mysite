@@ -9,15 +9,72 @@
     color: var(--text-color);
 }
 
+.homepage-background {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center end;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* credit - Will van der Tuin: https://codepen.io/wilvander/pen/KKQrGgP */
+.homepage-gradient {
+    position: absolute;
+    --size: 500px;
+    --speed: 25s;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--size);
+    height: var(--size);
+    filter: blur(calc(var(--size) / 5));
+    background-image: linear-gradient(var(--primary-accent-color), var(--secondary-accent-color));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.homepage-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.homepage-greeting {
+    padding-left: 1rem;
+    text-align: left;
+    font-size: 5rem;
+}
+
 .homepage-name {
-    font-size: 50px;
+    width: 100vw;
+    font-size: 8rem;
+    text-align: center;
 }
 
 .homepage-animation {
-    height: 10%;
+    align-items: center;
     width: 100%
 }
 
 .landing-banner {
     padding-top: 10px;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 720px) {
+  .gradient {
+    --size: 250px;
+  }
 }
