@@ -23,12 +23,12 @@
 /* credit - Will van der Tuin: https://codepen.io/wilvander/pen/KKQrGgP */
 .homepage-gradient {
     position: absolute;
-    --size: 500px;
     --speed: 25s;
+    --gradient-size: 500px;
     --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
-    width: var(--size);
-    height: var(--size);
-    filter: blur(calc(var(--size) / 5));
+    width: var(--gradient-size);
+    height: var(--gradient-size);
+    filter: blur(calc(var(--gradient-size) / 5));
     background-image: linear-gradient(var(--primary-accent-color), var(--secondary-accent-color));
     animation: rotate var(--speed) var(--easing) alternate infinite;
     border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
@@ -57,6 +57,7 @@
 
 .homepage-animation {
     align-items: center;
+    font-size: 20px;
     width: 100%
 }
 
@@ -73,8 +74,8 @@
   }
 }
 
-@media (min-width: 720px) {
-  .gradient {
-    --size: 250px;
+@media (max-width: 720px) {
+  .homepage-gradient {
+    --gradient-size: 300px;
   }
 }
