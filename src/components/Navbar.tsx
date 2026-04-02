@@ -19,7 +19,7 @@ function Navbar() {
         <nav className="navbar">
             <div className="navbar-container">
                 <div className="social-links">
-                    <p>Graham Wobig</p>
+                    <p className="name">gw</p>
                     <a target="_blank" href="https://www.github.com/grahamwobig">
                         <img src="/github_darkMode_32x32.png" alt="Github"/>
                     </a>

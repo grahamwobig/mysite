@@ -8,8 +8,8 @@ function Landing() {
                 <div className="homepage-gradient"></div>
             </div>
             <div className="homepage-content">
-                <span className="homepage-greeting">Hey,</span>
-                <span className="homepage-name">I'm Graham</span>
+                <span className="homepage-greeting">Hey, I'm</span>
+                <span className="homepage-name">Graham</span>
                 <div className="homepage-animation">
                     <FadingTypewriter 
                         strings={[

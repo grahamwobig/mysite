@@ -1,5 +1,4 @@
 /* Global CSS variables and font setup */
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 @import url('colors.css');
 
 :root {
@@ -7,7 +6,7 @@
   --spacing-xl: 24px;
   --container-width: 1200px;
   --transition-fast: 0.3s ease;
-  --menu-font-family: 'Pixelify Sans', sans-serif;
+  --menu-font-family: 'Lora Variable', serif;
 }
 
 
@@ -28,7 +27,6 @@
   left: 0;
   z-index: 1000;
   font-family: var(--menu-font-family);
-  text-transform: uppercase;
 }
 
 .navbar-container {
@@ -49,7 +47,8 @@
 
 .social-links p {
     padding-right: 1rem;
-    font-size: 2.5rem;
+    font-family: var(--menu-font-family);
+    font-size: 2rem;
 }
 
 .social-links a {
