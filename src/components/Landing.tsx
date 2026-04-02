@@ -1,4 +1,5 @@
 import FadingTypewriter from "./FadingTypewriter";
+import Button from "./Button";
 import "../styles/Landing.css";
 
 function Landing() {
@@ -26,13 +27,13 @@ function Landing() {
                 </div>
                 <div className="landing-banner">
                     <p>
-                        Full Stack Software Engineer meets Process Automation Engineer. 
-                        Motivated by the challenges of working on multi-disciplinary projects.
+                        Software Engineer meets Automation Engineer. 
+                        I enjoy solving the unique challenges of multi-disciplinary projects.
                     </p>
                 </div>
                 <div className="landing-buttons">
-                    <span>Learn More</span>
-                    <span>Contact Me</span>
+                    <Button buttonText="Learn More"/>
+                    <Button buttonText="Contact Me"/>
                 </div>
             </div>
         </section>

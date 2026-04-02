@@ -19,7 +19,7 @@
     opacity: 100%;
     height: 60px;
     width: 60px;
-    fill: var(--primary-accent-color);
+    fill: var(--secondary-accent-color);
     transition-duration: 300ms;
 }
 

@@ -1,0 +1,17 @@
+@import url('colors.css');
+
+.button {
+    height: 3rem;
+    width: 8rem;
+    background-color: var(--surface-color);
+    border: none;
+    color: var(--primary--accent-color);
+    border-radius: 10%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition-duration: 200ms;
+}
+
+.button:hover {
+    border: 20px solid var(--primary--accent-color);
+}
