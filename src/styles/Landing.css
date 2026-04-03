@@ -62,9 +62,8 @@
 }
 
 .homepage-animation {
-    height: 6rem;
+    height: 3rem;
     font-size: 2.5rem;
-    margin-bottom: 3rem;
     color: var(--secondary-accent-color)
 }
 
@@ -76,7 +75,18 @@
 
 .landing-buttons {
     padding-top: 2rem;
-    color: var(--secondary-accent-color);
+    display: flex;
+    align-items: center;
+
+    :nth-child(2) {
+        margin-left: 2rem;
+    }
+
+    @media(max-width: 1024px) {
+        :nth-child(2) {
+            margin-left: 1rem;
+        }
+    }
 }
 
 @keyframes rotate {

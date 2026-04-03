@@ -16,9 +16,10 @@
 }
 
 .typewriter-icon {
+    margin-left: 0.5rem;
     opacity: 100%;
-    height: 60px;
-    width: 60px;
+    height: 40px;
+    width: 40px;
     fill: var(--secondary-accent-color);
     transition-duration: 300ms;
 }
@@ -26,4 +27,11 @@
 .typewriter-icon.fade {
     opacity: 0%;
     translate: translateY(2rem);
+}
+
+@media (max-width: 1024px) {
+    .typewriter-icon {
+        height: 24px;
+        width: 24px;
+    }
 }

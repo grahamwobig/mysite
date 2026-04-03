@@ -28,12 +28,12 @@ function Landing() {
                 <div className="landing-banner">
                     <p>
                         Software Engineer meets Automation Engineer. 
-                        I enjoy solving the unique challenges of multi-disciplinary projects.
+                        I enjoy the unique challenges of working on multi-disciplinary projects.
                     </p>
                 </div>
                 <div className="landing-buttons">
-                    <Button buttonText="Learn More"/>
-                    <Button buttonText="Contact Me"/>
+                    <Button buttonText="Learn More" />
+                    <Button buttonText="Contact Me" />
                 </div>
             </div>
         </section>
