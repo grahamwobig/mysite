@@ -1,3 +1,5 @@
+import '../styles/About.css';
+
 function About() {
     const yearsCalc = () => {
         const start = new Date("2025-01-01");
@@ -7,7 +9,7 @@ function About() {
 
     return(
         <section className="about-page">
-            <h1 className="about-heading">#About</h1>
+            <h1 className="about-heading"># About</h1>
             <p className="about-bio">
                 I'm a Full Stack Developer with {yearsCalc()}+ years of experience.
                 For most of my career, I have been working on software for industrial automation.

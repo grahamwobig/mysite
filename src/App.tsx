@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router";
 import Navbar from "./components/Navbar";
 import "./styles/Navbar.css";
 import Landing from "./components/Landing";
+import About from "./components/About";
 
 function Page({ color, text }: { color: string, text: string }) {
   return (
@@ -22,6 +23,7 @@ function App() {
     <Router>
       <Navbar />
       <Landing />
+      <About />
       <Routes>
         <Route path="/about" element={<Page color="#4281A4" text="About"/>} />
         <Route path="/skills" element={<Page color="#48A9A6" text="Skills"/>} />
