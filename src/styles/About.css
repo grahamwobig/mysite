@@ -17,4 +17,7 @@
     font-family: 'Montserrat-Variable', sans-serif;
     font-size: 1rem;
     color: var(--text-color);
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

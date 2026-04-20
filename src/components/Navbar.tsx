@@ -28,12 +28,22 @@ function Navbar() {
                     </a>
                 </div>
 
-                <ul className="navbar-menu">
+                {/* <ul className="navbar-menu">
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/skills">Skills</Link></li>
                     <li><Link to="/work">Work</Link></li>
                     <li><Link to="/projects">Projects</Link></li>
                     <li><Link to="/contact">Contact</Link></li>
+                    <li><a target="_blank" href="/resume.pdf">Resume</a></li>
+                </ul> */}
+
+                <ul className="navbar-menu">
+                    <li><a href="#landing">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    {/* <li><Link to="/projects">Projects</Link></li>
+                    <li><Link to="/contact">Contact</Link></li> */}
                     <li><a target="_blank" href="/resume.pdf">Resume</a></li>
                 </ul>
 
@@ -43,7 +53,7 @@ function Navbar() {
                     <span></span>
                 </div>
 
-                <div className={`navbar-mobile-menu ${isOpen ? 'active' : ''}`}>
+                {/* <div className={`navbar-mobile-menu ${isOpen ? 'active' : ''}`}>
                     <ul>
                         <li><Link to="/about" onClick={closeMenu}>About</Link></li>
                         <li><Link to="/skills" onClick={closeMenu}>Skills</Link></li>
@@ -52,7 +62,7 @@ function Navbar() {
                         <li><Link to="/contact" onClick={closeMenu}>Contact</Link></li>
                         <li><a target="_blank" href="/resume.pdf" onClick={closeMenu}>Resume</a></li>
                     </ul>
-                </div>
+                </div> */}
             </div>
         </nav>
     );
