@@ -33,7 +33,7 @@ function App() {
     //     <Route path="/contact" element={<Page color="#C1666B" text="Contact"/>} />
     //   </Routes>
     // </Router>
-    <html lang="en">
+    <>
       <header>
         <Navbar />
       </header>
@@ -43,7 +43,7 @@ function App() {
         <Page id="work" color="blue" text="Work"/>
         <Page id="projects" color="gray" text="Projects"/>
       </body>
-    </html>
+    </>
   )
 }
 
