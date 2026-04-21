@@ -1,0 +1,20 @@
+@import url('colors.css');
+
+.socials {
+    display: flex;
+    justify-content: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+}
+
+.socials-list {
+    margin-right: 5px;
+}
+
+.socials-icon {
+    color: var(--text-color);
+}
+
+.socials-icon:hover {
+    color: var(--secondary-accent-color);
+}

@@ -9,6 +9,7 @@
     place-content: center start;
     align-items: center;
     overflow: hidden;
+    background-color: var(--primary-color);
 }
 
 .background-gradient {
