@@ -1,0 +1,34 @@
+@import url('colors.css');
+
+.background {
+    position: sticky;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center start;
+    align-items: center;
+    overflow: hidden;
+}
+
+.background-gradient {
+    position: absolute;
+    --speed: 25s;
+    --gradient-size: 500px;
+    --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+    width: var(--gradient-size);
+    height: var(--gradient-size);
+    filter: blur(calc(var(--gradient-size) / 5));
+    background-image: linear-gradient(var(--background-color), var(--secondary-accent-color));
+    animation: rotate var(--speed) var(--easing) alternate infinite;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
