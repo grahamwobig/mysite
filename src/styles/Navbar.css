@@ -1,20 +1,41 @@
 /* Global CSS variables and font setup */
 @import url('colors.css');
+@import url('fonts.css');
 
 .navbar {
   display: block;
-  overflow: hidden;
 }
 
-.navbarList {
+.navbar-list {
   margin-top: 4rem;
   width: max-content;
+  list-style: none;
 }
 
-.navbarItem {
+.navbar-item {
   color: var(--link-inactive);
   display: flex;
   align-items: center;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
+  padding: 0.75rem 0;
+}
+
+.navbar-link {
+  color: var(--text-color-third);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: var(--font-sz-body);
+  display: flex;
+  p {
+    display: none;
+  }
+}
+
+.navbar-link:hover, .navbar-link.active {
+  color: var(--link-active);
+  span {
+    margin-left: 0.75rem;
+  }
+  p {
+    display: inherit;
+  }
 }

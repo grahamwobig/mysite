@@ -1,23 +1,17 @@
-@import url('Navbar.css');
 @import url('colors.css');
 
 .about-page {
-    width: 100%;
-    height: calc(100% - var(--navbar-height));
-    background-color: var(--background-color);
-}
-
-.about-heading {
-    font-family: 'Lora Variable', serif;
-    font-size: 3rem;
-    color: var(--secondary-accent-color)
+    margin-bottom: 9rem;
+    scroll-margin-top: 6rem;
+    display: block;
 }
 
 .about-bio {
-    font-family: 'Montserrat-Variable', sans-serif;
-    font-size: 1rem;
+    font-family: var(--font-body);
+    font-size: var(--font-sz-body);
     color: var(--text-color);
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: space-between;
+}
+
+.about-paragraph {
+    margin-bottom: 1rem;
 }

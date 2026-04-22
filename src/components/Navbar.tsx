@@ -1,51 +1,51 @@
 import "../styles/Navbar.css";
+import { useEffect, useState } from "react";
 
 function Navbar() {
+    //store active section
+    const [activeSection, setActiveSection] = useState("about");
+
+    //set the threshold for visibility to 70%
+    const observerOpts = {
+        threshold: 0.7
+    };
+
+    //use intersection observer to figure out which section is in view
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries: IntersectionObserverEntry[]) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        setActiveSection(entry.target.id);
+                    }
+                })
+        }, 
+        observerOpts);
+
+        const sections = document.querySelectorAll("section");
+        sections.forEach((section) => observer.observe(section));
+
+        return () => observer.disconnect();
+    }, [])
+
     return (
-        // <nav className="navbar">
-        //     <div className="navbar-container">
-        //         <div className="social-links">
-        //             <p className="name">gw</p>
-        //             <a target="_blank" href="https://www.github.com/grahamwobig">
-        //                 <img src="/github_darkMode_32x32.png" alt="Github"/>
-        //             </a>
-        //             <a target="_blank" href="https://www.linkedin.com/in/graham-wobig/">
-        //                 <img src="/linkedin_darkMode_32x32.png" alt="LinkedIn"/>
-        //             </a>
-        //         </div>
-
-        //         <ul className="navbar-menu">
-        //             <li><a href="#landing">Home</a></li>
-        //             <li><a href="#about">About</a></li>
-        //             <li><a href="#work">Work</a></li>
-        //             <li><a href="#projects">Projects</a></li>
-        //             {/* <li><Link to="/projects">Projects</Link></li>
-        //             <li><Link to="/contact">Contact</Link></li> */}
-        //             <li><a target="_blank" href="/resume.pdf">Resume</a></li>
-        //         </ul>
-
-        //         <div className="navbar-hamburger" onClick={toggleMenu}>
-        //             <span></span>
-        //             <span></span>
-        //             <span></span>
-        //         </div>
-
-        //     </div>
-        // </nav>
         <nav className="navbar">
-            <ul className="navbarList">
-                <li className="navbarItem">
-                    <a href="#about" className="navbarLink">
+            <ul className="navbar-list">
+                <li className="navbar-item">
+                    <a href="#about" className={`navbar-link ${activeSection === "about" ? "active" : ""}`}>
+                        <p>&rarr;</p>
                         <span>About</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#experience">
+                <li className="navbar-item">
+                    <a href="#experience" className={`navbar-link ${activeSection === "experience" ? "active" : ""}`}>
+                        <p>&rarr;</p>
                         <span>Experience</span>
                     </a>
                 </li>
-                <li>
-                    <a href="#projects">
+                <li className="navbar-item">
+                    <a href="#projects" className={`navbar-link ${activeSection === "projects" ? "active" : ""}`}>
+                        <p>&rarr;</p>
                         <span>Projects</span>
                     </a>
                 </li>

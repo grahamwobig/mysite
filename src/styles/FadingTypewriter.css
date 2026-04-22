@@ -1,4 +1,5 @@
 @import url('colors.css');
+@import url('fonts.css');
 
 
 .typewriter-text {
@@ -20,7 +21,7 @@
     opacity: 100%;
     height: 40px;
     width: 40px;
-    fill: var(--secondary-accent-color);
+    fill: var(--text-color-secondary);
     transition-duration: 300ms;
 }
 

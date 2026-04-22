@@ -3,38 +3,45 @@
 
 
 .header {
+    align-self: flex-start;
     position: sticky;
-    height: 100%;
-    width: 50%;
+    height: 100vh;
+    max-height: 100vh;
+    width: 48%;
     top: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
-    z-index: 1;
-}
-
-.header-top {
-    
+    padding: 6rem 0;
+    font-size: var(--font-sz-md);
+    color: var(--text-color-secondary);
 }
 
 .header-greeting {
     font-family: var(--font-body);
-    font-size: var(--font-md);
+    font-size: var(--font-sz-md);
     color: var(--text-color-primary);
+    line-height: 1;
+    margin-bottom: 0.5rem;
 }
 
 .header-name {
     font-family: var(--font-accent);
-    font-size: var(--font-lg);
-    color: var(--text-color-primary);
-    margin-top: 4rem;
+    font-size: var(--font-sz-lg);
+    color: var(--secondary-accent-color);
+    line-height: 1;
+    margin-bottom: 0.75rem;
+}
+
+.header-typewriter {
+    line-height: 1;
+    min-height: var(--font-sz-lg);
 }
 
 .header-blurb {
     font-family: var(--font-body);
-    font-size: var(--font-sm);
-    color: var(--text-color-secondary);
-    margin-top: 4rem;
+    font-size: var(--font-sz-body);
+    color: var(--text-color-third);
+    margin-top: 0.75rem;
+    max-width: 20rem;
 }
