@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 
 function Navbar() {
     //store active section
-    const [activeSection, setActiveSection] = useState("about");
+    const [activeSection, setActiveSection] = useState("");
 
-    //set the threshold for visibility to 70%
+    //set the threshold for section visibility to 80%
     const observerOpts = {
-        threshold: 0.7
+        threshold: 0.8
     };
 
     //use intersection observer to figure out which section is in view

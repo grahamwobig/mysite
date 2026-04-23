@@ -1,6 +1,7 @@
 :root {
     --font-body: 'Montserrat-Variable', sans-serif;
     --font-accent: 'Lora-Variable', serif;
+    --font-sz-xl: 4rem;
     --font-sz-lg: 3rem;
     --font-sz-md: 2rem;
     --font-sz-sm: 1.5rem;

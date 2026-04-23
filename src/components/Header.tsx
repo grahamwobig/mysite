@@ -6,9 +6,9 @@ import FadingTypewriter from './FadingTypewriter';
 function Header() {
     return (
         <header className="header">
-            <div>
+            <div className="header-content">
                 <p className="header-greeting">Hey, I'm</p  >
-                <h1 className="header-name">Graham</h1>
+                <h1 className="header-name">Graham Wobig</h1>
                 <div className="header-typewriter">
                     <FadingTypewriter strings={[
                         "Full Stack Developer",

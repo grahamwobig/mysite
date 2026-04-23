@@ -19,8 +19,8 @@
 .typewriter-icon {
     margin-left: 0.5rem;
     opacity: 100%;
-    height: 40px;
-    width: 40px;
+    height: var(--font-sz-sm);
+    width: var(--font-sz-sm);
     fill: var(--text-color-secondary);
     transition-duration: 300ms;
 }
