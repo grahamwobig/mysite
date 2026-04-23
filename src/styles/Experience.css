@@ -1,0 +1,14 @@
+@import url('colors.css');
+
+.experience {
+    scroll-margin-top: 6rem;
+    margin-bottom: 9rem;
+}
+
+.experience-list {
+    list-style: none;
+}
+
+.experience-item {
+    margin-bottom: 3rem;
+}

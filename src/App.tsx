@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./components/Header";
 import "./styles/Navbar.css";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Background from "./components/Background";
 import "./styles/App.css";
 
@@ -39,7 +40,7 @@ function App() {
           <Header/>
           <main className="app-content">
             <About/>
-            <Page text="Experience" id="experience"/>
+            <Experience/>
             <Page text="Pojects" id="projects"/>
           </main>
         </div>
